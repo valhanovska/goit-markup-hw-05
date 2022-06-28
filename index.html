@@ -20,7 +20,7 @@
       <a href="./index.html" class="logo"><span class="web-logo">Web</span>Studio</a>
       <nav class="header-nav">
         <ul class="site-nav list">
-          <li class="item"><a href="./index.html" class="link current">Студия</a></li>
+          <li class="item current-link"><a href="./index.html" class="link current">Студия</a></li>
           <li class="item"><a href="./portfolio.html" class="link">Портфолио</a></li>
           <li class="item"><a href="" class="link">Контакты</a></li>
         </ul>
@@ -53,8 +53,16 @@
           Эффективные решения <br />
           для вашего бизнеса
         </h1>
-        <button type="button" class="hero-button">Заказать услугу</button>
+        <button type="button" class="hero-button" data-modal-open>Заказать услугу</button>
       </div>
+
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <p></p>
+          <button class="modal-button" data-modal-close>&#215;</button>
+        </div>
+      </div>
+
     </section>
 
     <!-- Особенности -->
@@ -118,13 +126,22 @@
         <h2 class="section-title">Чем мы занимаемся</h2>
         <ul class="work list">
           <li class="item">
-            <img src="./images/box1.jpg" alt="Создание сайтов" width="370" height="294" />
+            <div class="work-group">
+              <img src="./images/box1.jpg" alt="Создание сайтов" width="370" height="294" />
+              <p class="work-text list">Десктопные приложения</p>
+            </div>
           </li>
           <li class="item">
-            <img src="./images/box2.jpg" alt="Создание приложений" width="370" height="294" />
+            <div class="work-group">
+              <img src="./images/box2.jpg" alt="Создание приложений" width="370" height="294" />
+              <p class="work-text list">Мобильные приложения</p>
+            </div>
           </li>
           <li class="item">
-            <img src="./images/box3.jpg" alt="Добавление стилей" width="370" height="294" />
+            <div class="work-group">
+              <img src="./images/box3.jpg" alt="Добавление стилей" width="370" height="294" />
+              <p class="work-text list">Дизайнерские решения</p>
+            </div>
           </li>
         </ul>
       </div>
@@ -401,6 +418,8 @@
 
     </div>
   </footer>
+
+  <script src="./js/modal.js"></script>
 </body>
 
 </html>
